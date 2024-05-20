@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  mongo:
+    image: mongo:4.0.4
+    container_name: "webflux"
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  mongodb_data_container:
